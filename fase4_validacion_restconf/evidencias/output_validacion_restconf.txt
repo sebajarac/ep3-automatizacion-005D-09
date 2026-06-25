@@ -1,0 +1,14 @@
+=== VALIDACIÓN RESTCONF ===
+Script: validacion_restconf.py
+Fecha/Hora: 2026-06-25 02:51:39
+Host VM: labvm
+==========================
+
+[OK] Hostname corporativo: Esperado='RTR-PESAUST', Real='RTR-PESAUST'
+[OK] IP del Loopback: Esperado='10.5.9.1', Real='10.5.9.1'
+[OK] Descripcion WAN: Esperado='Enlace-WAN-Rancagua', Real='Enlace-WAN-Rancagua'
+[OK] Servidor NTP: Esperado='1.1.1.1', Real='1.1.1.1'
+
+==============================
+Resultado global: CONFORME (4/4 OK)
+==============================
