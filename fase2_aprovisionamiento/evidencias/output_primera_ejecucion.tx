@@ -1,0 +1,27 @@
+
+PLAY [Aprovisionamiento corporativo RTR-PESAUST] ******************************************************
+
+TASK [1. Respaldar configuracion actual] **************************************************************
+ok: [csr1kv]
+
+TASK [Guardar respaldo en archivo local] **************************************************************
+ok: [csr1kv -> localhost]
+
+TASK [2. Habilitar NETCONF] ***************************************************************************
+ok: [csr1kv]
+
+TASK [3. Habilitar RESTCONF] **************************************************************************
+ok: [csr1kv]
+
+TASK [4. Habilitar servidor HTTP seguro] **************************************************************
+ok: [csr1kv]
+
+TASK [5. Configurar hostname corporativo] *************************************************************
+ok: [csr1kv]
+
+TASK [6. Configurar banner de acceso] *****************************************************************
+fatal: [csr1kv]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'dict object' has no attribute 'banner'\n\nThe error appears to be in '/home/devasc/ep3-automatizacion-005D-09/fase2_aprovisionamiento/playbook_005D-09.yaml': line 41, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n    - name: \"6. Configurar banner de acceso\"\n      ^ here\n"}
+
+PLAY RECAP ********************************************************************************************
+csr1kv                     : ok=6    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+

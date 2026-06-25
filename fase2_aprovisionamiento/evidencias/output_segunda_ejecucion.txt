@@ -1,0 +1,30 @@
+
+PLAY [Aprovisionamiento Corporativo del Router] *******************************************************************
+
+TASK [1. Respaldar la configuracion actual (show running-config)] *************************************************
+ok: [csr1kv]
+
+TASK [Guardar respaldo en la carpeta correspondiente] *************************************************************
+changed: [csr1kv -> localhost]
+
+TASK [2. Habilitar NETCONF y RESTCONF, y 3. HTTP seguro] **********************************************************
+ok: [csr1kv]
+
+TASK [4. Configurar hostname corporativo] *************************************************************************
+ok: [csr1kv]
+
+TASK [5. Configurar banner de acceso] *****************************************************************************
+changed: [csr1kv]
+
+TASK [6. Configurar servidor NTP] *********************************************************************************
+ok: [csr1kv]
+
+TASK [7. Configurar descripcion de interfaz GigabitEthernet1] *****************************************************
+ok: [csr1kv]
+
+TASK [8. Crear interfaz Loopback con IP de gestion] ***************************************************************
+changed: [csr1kv]
+
+PLAY RECAP ********************************************************************************************************
+csr1kv                     : ok=8    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+

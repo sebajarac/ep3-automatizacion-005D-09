@@ -1,10 +1,11 @@
-# vars/vars_005D-09.yaml
 alumno:
   codigo: "005D-09"
-  nombre: "Sebastián Alexander Jara Castillo"
+  nombre: "Sebastian Alexander Jara Castillo"
+
 cliente:
   empresa: "Pesquera Austral SpA"
   hostname: "RTR-PESAUST"
+
 router:
   ip: "192.168.56.101"
   usuario: "cisco"

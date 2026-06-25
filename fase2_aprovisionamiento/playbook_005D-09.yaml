@@ -1,0 +1,53 @@
+---
+- name: Aprovisionamiento Corporativo del Router
+  hosts: routers
+  gather_facts: no
+  vars_files:
+    - ../vars/vars_005D-09.yaml
+
+  tasks:
+    - name: 1. Respaldar la configuracion actual (show running-config)
+      cisco.ios.ios_command:
+        commands: show running-config
+      register: backup_config
+
+    - name: Guardar respaldo en la carpeta correspondiente
+      copy:
+        content: "{{ backup_config.stdout[0] }}"
+        dest: "../respaldo/backup_005D-09.cfg"
+      delegate_to: localhost
+
+    - name: 2. Habilitar NETCONF y RESTCONF, y 3. HTTP seguro
+      cisco.ios.ios_config:
+        lines:
+          - netconf-yang
+          - restconf
+          - ip http secure-server
+
+    - name: 4. Configurar hostname corporativo
+      cisco.ios.ios_config:
+        lines:
+          - "hostname {{ cliente.hostname }}"
+
+    - name: 5. Configurar banner de acceso
+      cisco.ios.ios_config:
+        lines:
+          - "banner login c {{ router.banner }} c"
+
+    - name: 6. Configurar servidor NTP
+      cisco.ios.ios_config:
+        lines:
+          - "ntp server {{ router.ntp_server }}"
+
+    - name: 7. Configurar descripcion de interfaz GigabitEthernet1
+      cisco.ios.ios_interfaces:
+        config:
+          - name: GigabitEthernet1
+            description: "{{ router.descripcion_wan }}"
+
+    - name: 8. Crear interfaz Loopback con IP de gestion
+      cisco.ios.ios_l3_interfaces:
+        config:
+          - name: "Loopback{{ router.loopback_id }}"
+            ipv4:
+              - address: "{{ router.loopback_ip }} {{ router.loopback_mask }}"
