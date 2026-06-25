@@ -1,0 +1,33 @@
+=== BASELINE SNAPSHOT ===
+Alumno : 005D-09
+Fecha  : Thu 25 Jun 2026 02:12:24 AM UTC
+Host   : labvm
+=========================
+
+Learning '['interface', 'platform', 'routing']' on devices '['CSR1kv']'
+  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:38<01:16, 38.35s/it] 67%|██████▋   | 2/3 [00:49<00:30, 30.23s/it]100%|██████████| 3/3 [00:50<00:00, 21.39s/it]100%|██████████| 3/3 [00:50<00:00, 16.80s/it]+==============================================================================+
+| Genie Learn Summary for device CSR1kv                                        |
++==============================================================================+
+|  Connected to CSR1kv                                                         |
+|  -   Log: evidencias/baseline_005D-09/connection_CSR1kv.txt                  |
+|------------------------------------------------------------------------------|
+|  Learnt feature 'interface'                                                  |
+|  -  Ops structure:                                                           |
+| evidencias/baseline_005D-09/interface_iosxe_CSR1kv_ops.txt                   |
+|  -  Device Console:                                                          |
+| evidencias/baseline_005D-09/interface_iosxe_CSR1kv_console.txt               |
+|------------------------------------------------------------------------------|
+|  Learnt feature 'platform'                                                   |
+|  -  Ops structure:  evidencias/baseline_005D-09/platform_iosxe_CSR1kv_ops.txt |
+|  -  Device Console:                                                          |
+| evidencias/baseline_005D-09/platform_iosxe_CSR1kv_console.txt                |
+|------------------------------------------------------------------------------|
+|  Learnt feature 'routing'                                                    |
+|  -  Ops structure:  evidencias/baseline_005D-09/routing_iosxe_CSR1kv_ops.txt |
+|  -  Device Console:                                                          |
+| evidencias/baseline_005D-09/routing_iosxe_CSR1kv_console.txt                 |
+|==============================================================================|
+
+
+
+
