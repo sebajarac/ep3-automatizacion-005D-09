@@ -1,0 +1,18 @@
+# vars/vars_005D-09.yaml
+alumno:
+  codigo: "005D-09"
+  nombre: "Sebastián Alexander Jara Castillo"
+cliente:
+  empresa: "Pesquera Austral SpA"
+  hostname: "RTR-PESAUST"
+router:
+  ip: "192.168.56.101"
+  usuario: "cisco"
+  password: "cisco123!"
+  loopback_id: 10
+  loopback_ip: "10.5.9.1"
+  loopback_mask: "255.255.255.0"
+  loopback_prefix: "24"
+  descripcion_wan: "Enlace-WAN-Rancagua"
+  banner: "ACCESO RESTRINGIDO - PESAUST"
+  ntp_server: "1.1.1.1"
